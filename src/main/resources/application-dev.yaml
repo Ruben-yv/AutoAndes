@@ -1,0 +1,28 @@
+server:
+  port: 8080
+spring:
+  datasource:
+    url: jdbc:oracle:thin:@//localhost:1522/FREEPDB1
+    username: autodb
+    password: 123456
+  jpa:
+    database-platform: org.hibernate.dialect.OracleDialect
+    hibernate:
+      ddl-auto: validate
+    show-sql: true
+
+    properties:
+      hibernate:
+        format_sql: true
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+
+  api-docs:
+    enabled: true
+
+
+app:
+  jwt:
+    secret: 'F2Lcea3F/T1sZInMRuqcUT0YHYCnxT08Oug7VW8QKyso3YA9YFZSsGziePWpdOhpe8+FpX1wSY0vUf9ucuKYLw=='
+    expiracion-minutos: 60
